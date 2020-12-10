@@ -1,0 +1,566 @@
+:root {
+    --primary-theme-color: #0000FE;
+    --secondary-theme-color:#00F3BB;
+    --third-theme-color:#ffffff;
+    --primary-font-color:#060A24;
+    --secondary-font-color:#ffffff;
+    --primary-font-family:'IBM Plex Sans', sans-serif;
+    --secondary-font-family:'IBM Plex Mono', monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/* Componentes UI */
+.menu-items li a:hover {
+    font-family: var(--secondary-font-family);
+    font-size: 1.6rem;
+    color: var(--secondary-theme-color);
+    letter-spacing: 0;
+    line-height: 2.8rem;
+    text-decoration: line-through;
+}
+
+.menu-items li a:active {
+    font-family: var(--secondary-font-family);
+    font-size: 1.6rem;
+    color: var(--primary-font-color);
+    letter-spacing: 0;
+    line-height: 2.8rem;
+    text-decoration: line-through;
+}
+
+.menu-items li a {
+    font-size: 1.6rem;
+    font-family: var(--secondary-font-family);
+    color: var(--secondary-font-color);
+    line-height: 2.8rem;
+    letter-spacing: 0;
+    text-decoration: none;
+}
+
+button {
+    width: 28.8rem ;
+    height: 4.8rem;
+    background-color: var(--secondary-theme-color);
+    font-family: var(--secondary-font-family);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--primary-font-color);
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 2.2rem;
+    border: none;
+}
+
+button:hover {
+    width: 28.8rem ;
+    height: 4.8rem;
+    background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+    font-family: var(--secondary-font-family);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--secondary-font-color);
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 2.2rem;
+    border: none;
+}
+
+.nav-menu {
+    position: absolute;
+    top:4.4rem;
+    left: 0;
+    width: 100%;
+    max-height: 20rem;
+    background-color:var(--primary-theme-color);
+    overflow: hidden;
+}
+
+section {
+    width: 100%;
+}
+
+h1, h2 {
+    font-family: var(--primary-font-family);
+    font-size: 3.6rem;
+    font-weight: 400;
+    color: var(--primary-font-color);
+    letter-spacing: 0;
+    line-height: 4.2rem;
+    padding: 3rem 1.5rem 3rem 1.5rem;
+    margin: 0;
+}
+
+p {
+    font-family: var(--secondary-font-family);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--primary-font-color);
+    letter-spacing: 0;
+    line-height: 2.2rem;
+    padding: 1.5rem;
+    margin: 0;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Header */
+header {
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.4rem;
+    background-color: var(--third-theme-color);
+    padding: 1.5rem;
+    z-index: 1;
+}
+
+h1 {
+    padding: 0 1.5rem 0 1.5rem;
+    margin: 7.4rem 0 0 0;
+}
+
+.section-1 p {
+    min-width: 28.8rem;
+}
+
+/* Nav-mobile */
+.nav-menu {
+    display: none;
+    animation-name: mobile-faded;
+    animation-duration: 1s;
+}
+
+@keyframes mobile-faded {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-items li {
+    padding: 1rem 2.5rem 1rem 2.5rem;
+    list-style: none;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+label i {
+    font-size: 2.4rem;
+    cursor: pointer;
+}
+
+label i.toggle {
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ .nav-menu {
+    display: block;
+}
+
+input[type="checkbox"]:checked ~ label i.toggle {
+    display: block;
+}
+
+input[type="checkbox"]:checked ~ label i.normal {
+    display: none;
+}
+
+
+/* Section- 1 - Hero title */
+span.line {
+    text-decoration: line-through;
+}
+
+span.dot {
+    color:#0000EC;
+}
+
+button.top {
+    align-self: center;
+}
+
+br.title {
+    display: block;
+}
+
+
+/* Section-2 - Episodios */
+section.section-2 {
+    height: 130rem;
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    clip-path: polygon(0 5%, 100% 2%, 100% 95%, 0% 100%);
+}
+
+.section-2-container {
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+h2.episodios {
+    color: var(--secondary-font-color);
+}
+
+.iframes {
+    padding: 0 1.5rem 0 1.5rem;
+}
+
+iframe {
+    margin-bottom: 1.5rem;
+}
+
+
+/* Section-3 - Nosotros */
+section.section-3 {
+    position: relative;
+}
+
+img.celular {
+    height: 52rem;
+    align-self: center;
+    margin-top: -6rem;
+}
+
+
+/* Section-4 - Entrevistas */
+section.section-4 {
+    width: 100%;
+}
+
+.images {
+    align-items: center;
+}
+
+.image-S4{
+    width: 100%;
+}
+
+
+/* Section-5 - Topicos */
+section.section-5 {
+    width: 100%;
+}
+
+.section-5 p {
+    font-weight: 600;
+}
+
+.topicos-content {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-S5 {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.5rem 0px 1.5rem;
+}
+
+
+/* Section-6 - Call to action */
+section.section-6 {
+    justify-content: center;
+    width: 100%;
+    height: 34rem;
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+    padding: 1.5rem;
+}
+
+.call {
+    justify-content: center;
+    align-items: center;
+}
+
+h2.call-action {
+    color: var(--secondary-font-color);
+    text-align: center;
+}
+
+button.bottom {
+    align-self: center;
+}
+
+
+/* Footer */
+footer {
+    position: relative;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 2.4rem 4.2rem 4.8rem 4.2rem;
+}
+
+footer p {
+    padding: 0 0 1.6rem 0;
+}
+
+.iconos-footer{
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.iconos-footer i {
+    font-size: 1.8rem;
+    transition: all .2s ease-in-out;
+}
+
+.iconos-footer i:hover {
+    color: #0000FF;
+    transform: scale(1.1);
+}
+
+
+
+/*TABLETS*/
+@media screen and (min-width: 768px){
+br.title {
+    display: none;
+}
+
+.iframes {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-column-gap: 3rem;
+    grid-row-gap: 3rem;
+}
+
+.section-2-container {
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+section.section-2 {
+    height: 80rem;
+}
+
+img.celular {
+    margin-top: -8rem;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+}
+
+.topicos-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.image-S5 p {
+    text-align: center;
+}
+
+button.top {
+    align-self: flex-start;
+    margin: 1.5rem;
+}
+}
+
+/*DESKTOP*/
+@media screen and (min-width: 1024px){
+    h1, h2 {
+        font-size: 6.4rem;
+        line-height: 8.4rem;
+        padding: 6rem 20rem 6rem 20rem;
+        margin: 0;
+    }
+
+    p {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        padding: 0rem 20rem 2rem 20rem;
+        margin: 0;
+    }
+
+    .nav-menu {
+        position: relative;
+        width: 75%;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        animation: none;
+        max-height: 8rem;
+        background-color: var(--third-theme-color);
+    }
+
+    .menu-items {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 2.2rem 10rem 2.2rem 0;
+    }
+
+    .menu-items li {
+        color: var(--primary-font-color);
+        list-style: none;
+    }
+
+    .menu-items li a {
+        color: var(--primary-font-color);
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    label{
+        display: none;
+    }
+
+    header {
+        height: 8rem;
+        padding: 0 2.2rem 0 2.2rem;
+    }
+
+    h1 {
+        padding: 12rem 20rem 0 20rem;
+        margin: 10rem 0 0 0;
+    }
+
+    .section-1 p {
+        min-width: 62.8rem;
+        padding: 0 20rem 0 20rem;
+    }
+
+    img.logo {
+        width: 3.6rem;
+        margin: 2.2rem 0 2.2rem 10rem;
+    }
+
+    button.top {
+        margin: 5.6rem 20rem 0 20rem;
+    }
+
+    section.section-2 {
+        height: 100rem;
+        clip-path: polygon(0 15%, 100% 5%, 100% 95%, 0% 100%);
+    }
+
+    .section-2-container {
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    h2.episodios {
+        color: var(--secondary-font-color);
+    }
+
+    .iframes {
+        margin: 2.2rem 10rem 2.2rem 10rem;
+    }
+
+    section.section-3 {
+        flex-direction: row;
+    }
+
+    img.celular {
+        height: 66rem;
+        margin: -8rem 0 0 20rem;
+    }
+
+    .section-3-content {
+        width: 100%;
+        margin: 0 0 6rem 0;
+        padding: 0;
+    }
+
+    .section-3 h2 {
+        padding: 6rem 15rem 0 6.2rem;
+    }
+
+    .section-3 p {
+        padding: 3rem 15rem 0 6.2rem;
+    }
+
+    .images {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+    }
+
+    .topicos-content {
+        padding: 0 20rem 2rem 20rem;
+    }
+
+    .section-5 p {
+        padding: 2rem 0 0 0;
+    }
+
+    section.section-6 {
+        height: 60rem;
+        clip-path: polygon(0 30%, 100% 10%, 100% 100%, 0% 100%);
+    }
+
+    .call {
+        padding-top: 10%;
+    }
+
+    footer.flex-column {
+        position: relative;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 2.4rem 4.2rem 2.4rem 4.2rem;
+    }
+
+    footer p {
+        padding: 0;
+        width: 50%;
+        margin: 0 0 0 10rem;
+    }
+
+    .iconos-footer{
+        width: 50%;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 10rem 0 0;
+    }
+
+}
